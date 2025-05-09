@@ -1,79 +1,90 @@
 import Image from "next/image"
 import { Facebook, Instagram, Youtube, Phone } from "lucide-react"
 
+
 export default function PizzaMenu() {
   // Pizza data array
   const pizzas = [
     {
-      id: 1,
-      name: "Veg Pizza Small",
-      description: "Fresh tomatoes, mozzarella, basil",
-      originalPrice: 250,
-      currentPrice: 149,
-    },
-    {
-      id: 2,
-      name: "Pepperoni Pizza",
-      description: "Pepperoni, extra cheese, oregano",
-      originalPrice: 249,
-      currentPrice: 189,
-    },
-    {
-      id: 3,
-      name: "Veggie Supreme",
-      description: "Bell peppers, mushrooms, onions, olives",
-      originalPrice: 229,
-      currentPrice: 179,
-    },
-    {
-      id: 4,
-      name: "BBQ Chicken",
-      description: "Grilled chicken, BBQ sauce, red onions",
-      originalPrice: 269,
-      currentPrice: 199,
-    },
-    {
-      id: 5,
-      name: "Hawaiian Delight",
-      description: "Ham, pineapple, extra cheese",
-      originalPrice: 239,
-      currentPrice: 179,
-    },
-    {
-      id: 6,
-      name: "Meat Lovers",
-      description: "Pepperoni, sausage, bacon, ground beef",
-      originalPrice: 289,
-      currentPrice: 219,
-    },
-    {
-      id: 7,
-      name: "Spicy Mexican",
-      description: "Jalapeños, ground beef, bell peppers, onions",
-      originalPrice: 259,
-      currentPrice: 199,
-    },
-    {
-      id: 8,
-      name: "Mushroom Truffle",
-      description: "Assorted mushrooms, truffle oil, arugula",
-      originalPrice: 279,
-      currentPrice: 209,
-    },
-    {
-      id: 9,
-      name: "Four Cheese",
-      description: "Mozzarella, cheddar, parmesan, gorgonzola",
-      originalPrice: 249,
-      currentPrice: 189,
-    },
-    {
-      id: 10,
-      name: "Seafood Special",
-      description: "Shrimp, calamari, mussels, fresh herbs",
-      originalPrice: 299,
-      currentPrice: 229,
-    },
+    id: 1,
+    name: "Veg Pizza Small (1 Person)",
+    description: "Classic vegetarian pizza with fresh tomatoes, mozzarella, and basil.",
+    originalPrice: 250,
+    currentPrice: 149,
+    image: "https://png.pngtree.com/png-clipart/20250221/original/pngtree-veggie-pizza-white-background-1-png-image_20491164.png?height=200&width=200"
+  },
+  {
+    id: 2,
+    name: "Veg Pizza Medium (2-3 People)",
+    description: "Medium pizza with bell peppers, onions, and black olives on a cheesy base.",
+    originalPrice: 249,
+    currentPrice: 189,
+    image: "https://png.pngtree.com/png-clipart/20250221/original/pngtree-veggie-pizza-white-background-1-png-image_20491164.png?height=200&width=200"
+  },
+  {
+    id: 3,
+    name: "Veg Pizza Large (Family)",
+    description: "Large family-style veggie pizza topped with mushrooms, corn, and capsicum.",
+    originalPrice: 229,
+    currentPrice: 179,
+    image: "https://png.pngtree.com/png-clipart/20250221/original/pngtree-veggie-pizza-white-background-1-png-image_20491164.png?height=200&width=200"
+  },
+  {
+    id: 4,
+    name: "Mushroom Pizza Small (1 Person)",
+    description: "Personal-sized pizza with fresh mushrooms and mozzarella cheese.",
+    originalPrice: 269,
+    currentPrice: 199,
+    image: "https://previews.123rf.com/images/radionphoto/radionphoto1702/radionphoto170200611/72031636-mushroom-pizza-mozzarella-mushrooms-isolated-on-white-background.jpg?height=200&width=200"
+  },
+  {
+    id: 5,
+    name: "Mushroom Pizza Medium (2-3 People)",
+    description: "Medium mushroom pizza with a perfect blend of cheese and herbs.",
+    originalPrice: 239,
+    currentPrice: 179,
+    image: "https://previews.123rf.com/images/radionphoto/radionphoto1702/radionphoto170200611/72031636-mushroom-pizza-mozzarella-mushrooms-isolated-on-white-background.jpg?height=200&width=200"
+  },
+  {
+    id: 6,
+    name: "Mushroom Pizza Large (Family)",
+    description: "Family-size pizza generously topped with mushrooms and mozzarella.",
+    originalPrice: 289,
+    currentPrice: 219,
+    image: "https://previews.123rf.com/images/radionphoto/radionphoto1702/radionphoto170200611/72031636-mushroom-pizza-mozzarella-mushrooms-isolated-on-white-background.jpg?height=200&width=200"
+  },
+  {
+    id: 7,
+    name: "Chicken Pizza Small (1 Person)",
+    description: "Grilled chicken with BBQ sauce and red onions on a crispy base.",
+    originalPrice: 259,
+    currentPrice: 199,
+    image: "https://i.pinimg.com/736x/ec/1f/d3/ec1fd366a2a14042715fefeb346f5814.jpg?height=200&width=200"
+  },
+  {
+    id: 8,
+    name: "Chicken Pizza Medium (2-3 People)",
+    description: "Tender chicken with jalapeños and onions for a bold flavor punch.",
+    originalPrice: 279,
+    currentPrice: 209,
+    image: "https://i.pinimg.com/736x/ec/1f/d3/ec1fd366a2a14042715fefeb346f5814.jpg?height=200&width=200"
+  },
+  {
+    id: 9,
+    name: "Chicken Pizza Large (Family)",
+    description: "Family-sized pizza packed with juicy chicken, herbs, and mozzarella.",
+    originalPrice: 249,
+    currentPrice: 189,
+    image: "https://i.pinimg.com/736x/ec/1f/d3/ec1fd366a2a14042715fefeb346f5814.jpg?height=200&width=200"
+  },
+  {
+    id: 10,
+    name: "Chicken Sausage Pizza Medium",
+    description: "Sliced chicken sausage with peppers and caramelized onions.",
+    originalPrice: 299,
+    currentPrice: 229,
+    image: "https://www.cupofzest.com/wp-content/uploads/2022/06/Chicken-Sausage-Pizza-with-Onions-and-Peppers-Thumbnail.jpg?height=200&width=200"
+  }
   ]
 
   return (
@@ -116,26 +127,60 @@ export default function PizzaMenu() {
       </main>
 
       <footer className="bg-gray-800 text-white py-6">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="mb-4 md:mb-0">© 2025 Classic Pizza</p>
-            <div className="flex space-x-6">
-              <a href="#" className="hover:text-[#37b5fd] transition-colors">
-                <Facebook size={24} />
-              </a>
-              <a href="#" className="hover:text-[#37b5fd] transition-colors">
-                <Instagram size={24} />
-              </a>
-              <a href="#" className="hover:text-[#37b5fd] transition-colors">
-                <Youtube size={24} />
-              </a>
-              <a href="#" className="hover:text-[#37b5fd] transition-colors">
-                <Phone size={24} />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+  <div className="container mx-auto px-4">
+    <div className="flex flex-col md:flex-row justify-between items-center">
+      <p className="mb-4 md:mb-0">© 2025 Classic Pizza — Delivery only, Serving Butwal (45–60 min)</p>
+      <div className="flex space-x-6 items-center">
+        <a
+          href="https://www.facebook.com/classicpizzanepal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#37b5fd] transition-colors"
+        >
+          <Facebook size={24} />
+          <span className="sr-only">Facebook</span>
+        </a>
+        <a
+          href="https://www.instagram.com/classicpizzanepal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#e1306c] transition-colors"
+        >
+          <Instagram size={24} />
+          <span className="sr-only">Instagram</span>
+        </a>
+        <a
+          href="https://www.youtube.com/@classicpizzanepal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#ff0000] transition-colors"
+        >
+          <Youtube size={24} />
+          <span className="sr-only">YouTube</span>
+        </a>
+        <a
+          href="https://wa.me/9867034588"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#25D366] transition-colors"
+        >
+          <Phone size={24} />
+          <span className="sr-only">WhatsApp 9867034588</span>
+        </a>
+        <a
+          href="https://wa.me/9706631613"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#25D366] transition-colors"
+        >
+          <Phone size={24} />
+          <span className="sr-only">WhatsApp 9706631613</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   )
 }
