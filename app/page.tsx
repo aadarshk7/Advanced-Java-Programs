@@ -9,7 +9,7 @@ export default function PizzaMenu() {
       name: "Veg Pizza Small (1 Person)",
       description: "Classic vegetarian pizza with fresh tomatoes, mozzarella, and basil.",
       originalPrice: 250,
-      currentPrice: 200,
+      currentPrice: 180,
       image:
         "https://png.pngtree.com/png-clipart/20250221/original/pngtree-veggie-pizza-white-background-1-png-image_20491164.png?height=200&width=200",
     },
